@@ -1,3 +1,5 @@
+package it.ancientrealms.mcduelsplaceholders
+
 import me.clip.placeholderapi.expansion.PlaceholderExpansion
 import me.stevie212.McDuels.McDuels
 import org.bukkit.Bukkit
