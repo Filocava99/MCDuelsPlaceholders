@@ -1,0 +1,35 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.30'
+    id 'com.github.johnrengelman.shadow' version '6.0.0'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.30'
+}
+
+group 'it.ancientrealms.mcduelsplaceholders'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url("https://hub.spigotmc.org/nexus/content/repositories/snapshots/") }
+    maven { url("https://jitpack.io") }
+    maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.5.30'
+    implementation 'org.spigotmc:spigot-api:1.17-R0.1-SNAPSHOT'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.5.30'
+    implementation files('libs/McDuels 2.2.19.jar')
+    compileOnly 'me.clip:placeholderapi:2.10.10'
+}
+
+shadowJar {
+    dependencies {
+        exclude(dependency('org.spigotmc:spigot-api:.*'))
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "16"
+    }
+}

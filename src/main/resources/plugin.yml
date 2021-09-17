@@ -1,0 +1,8 @@
+name: McDuelsPlaceholders
+main: it.ancientrealms.placeholders.McDuelsPlaceholders
+version: 1.0.0
+author: TitoTigit
+depend:
+  - PlaceholderAPI
+  - McDuels
+  - KotlinLib
