@@ -1,5 +1,6 @@
 name: McDuelsPlaceholders
-main: it.ancientrealms.placeholders.McDuelsPlaceholders
+main: it.ancientrealms.McDuelsPlaceholders
+api-version: 1.17
 version: 1.0.0
 author: TitoTigit
 depend:
