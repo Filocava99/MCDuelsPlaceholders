@@ -24,6 +24,9 @@ class Expansion : PlaceholderExpansion() {
             "top_elo_1_name" -> McDuels.datamanager.getTopPlayers(1, "Elo")[0].name
             "top_elo_2_name" -> McDuels.datamanager.getTopPlayers(2, "Elo")[1].name
             "top_elo_3_name" -> McDuels.datamanager.getTopPlayers(3, "Elo")[2].name
+            "top_elo_1" -> McDuels.datamanager.getTopPlayers(1, "Elo")[0].amount.toString()
+            "top_elo_2" -> McDuels.datamanager.getTopPlayers(2, "Elo")[1].amount.toString()
+            "top_elo_3" -> McDuels.datamanager.getTopPlayers(3, "Elo")[2].amount.toString()
             else -> "Not found"
         }
     }
